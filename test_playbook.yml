@@ -18,6 +18,9 @@
   - syncrou.manageiq-automate
 
   tasks:
+    
+    - debug: var="Tower Job ID: {{ tower_job_id }}"
+    
     - name: "Check an attribute"
       manageiq_automate:
         workspace: "{{ workspace }}"
@@ -91,8 +94,8 @@
         workspace: "{{ workspace }}"
         set_attribute:
           object: "root"
-          attribute: "my_name"
-          value:  "Caleb"
+          attribute: "tower_job_id"
+          value:  "{{ tower_job_id }}"
       register: workspace
 
     - name: "Set attributes"
@@ -118,7 +121,7 @@
         workspace: "{{ workspace }}"
         get_decrypted_attribute:
           object: root
-          attribute: fred
+          attribute: password
       register: decrypted_attribute
 
     - debug: msg=decrypted_attribute
@@ -127,7 +130,7 @@
       manageiq_automate:
         workspace: "{{ workspace }}"
         get_decrypted_method_parameter:
-          attribute: fred
+          attribute: password
 
     - name: Encrypt an object attribute
       manageiq_automate:
