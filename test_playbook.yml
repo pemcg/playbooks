@@ -38,11 +38,11 @@
         state_var_exists:
           attribute: "task_id"
 
-    - name: "Get a state_var"
-      manageiq_automate:
-        workspace: "{{ workspace }}"
-        get_state_var:
-          attribute: "task_id"
+    #- name: "Get a state_var"
+    #  manageiq_automate:
+    #    workspace: "{{ workspace }}"
+    #    get_state_var:
+    #      attribute: "task_id"
 
     - name: "Set a State Var"
       manageiq_automate:
