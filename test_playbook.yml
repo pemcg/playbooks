@@ -58,11 +58,11 @@
         method_parameter_exists:
           parameter: "task_id"
 
-    - name: "Get a Method Parameter"
-      manageiq_automate:
-        workspace: "{{ workspace }}"
-        get_method_parameter:
-          parameter: "invoice"
+    #- name: "Get a Method Parameter"
+    #  manageiq_automate:
+    #    workspace: "{{ workspace }}"
+    #    get_method_parameter:
+    #      parameter: "invoice"
 
     - name: "Get the full list of Objects"
       manageiq_automate:
