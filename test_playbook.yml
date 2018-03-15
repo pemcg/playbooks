@@ -19,7 +19,7 @@
 
   tasks:
     
-    - debug: var="Tower Job ID: {{ tower_job_id }}"
+    - debug: msg="Tower Job ID = {{ tower_job_id }}"
     
     - name: "Check an attribute"
       manageiq_automate:
