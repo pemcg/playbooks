@@ -93,7 +93,7 @@
       manageiq_automate:
         workspace: "{{ workspace }}"
         set_attribute:
-          object: "object"
+          object: "root"
           attribute: "tower_job_id"
           value:  "{{ tower_job_id }}"
       register: workspace
